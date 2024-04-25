@@ -5,7 +5,7 @@ class Solver():
     def __init__(self, cipher: str):
         self.cipher = cipher
         
-    def decrypt_ceasar(self,text_encrypted:str, key: int, alpha_len=26):
+    def decrypt_ceasar(self,text_encrypted:str, key: int, alpha_len=26) -> str:
         res = ""
         for i in range(len(text_encrypted)):
             char = text_encrypted[i]
@@ -22,7 +22,7 @@ class Solver():
         
         return h1, h2
           
-    def decrypt_transition(self,text_encrypted: str, key: int):
+    def decrypt_transition(self,text_encrypted: str, key: int) -> str:
         res = [""]*len(text_encrypted)
         key_str = str(key)
         for letterpos in range(len(text_encrypted)):     
